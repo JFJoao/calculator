@@ -13,13 +13,13 @@ operations = {"+":add,
               "/":divide
               }
 def calculator ():
-    num1 = int(input("What's the first number ?\n"))
+    num1 = float(input("What's the first number ?\n"))
     continue_calc = True
     while continue_calc:
         for signal in operations:
             print(signal, end = " ")
         operation_signal = input("Choose one operator.\n")
-        num2 = int(input("What's the next number?\n"))
+        num2 = float(input("What's the next number?\n"))
         calculation_function = operations[operation_signal]
         answer = calculation_function(num1,num2)
         print(f"{num1}{operation_signal}{num2} = {answer}")
